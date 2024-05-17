@@ -20,6 +20,8 @@ public class generatePassword {
 		chars.append(numbers);
 		chars.append(specialchars);
 
+//		randomly adds the characters into the string
+//		if possible should be able to have at least one of each type
 		for (int i = 0; i < length; i++) {
 			Password.append(chars.charAt(random.nextInt(chars.length())));
 		}
