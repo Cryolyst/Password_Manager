@@ -15,7 +15,7 @@ public class MainProgram {
 
 		System.out.println(generatePassword.generate(pass_length));
 		
-		ReadFile.check();
+		ReadFile.check("123473");
 
 		input.close();
 	}

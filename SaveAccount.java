@@ -2,8 +2,7 @@ package Password_Manager.Password_Manager;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class SaveAccount {
 
@@ -18,6 +17,7 @@ public class SaveAccount {
 		System.out.println("Enter password: ");
 		String password = input.next();
 		accounts.put(accNum, password);
+
 
 		try {
 			FileWriter writer = new FileWriter(filePath, true);

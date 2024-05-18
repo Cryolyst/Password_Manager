@@ -2,29 +2,38 @@ package Password_Manager.Password_Manager;
 
 import java.io.File;
 import java.util.*;
-import java.io.FileNotFoundException;
+import java.io.*;
 
 public class ReadFile {
 
-	public static void check() {
+	public static void check(String accNum) {
 
 		String data = "";
+		HashMap<String, String> map = new HashMap<>();
 
 //		Should use your own filePath
 		String filePath = "C:/Users/Thant Zarni Nay/eclipse-workspace/MyJavaProjects/src/Password_Manager/Password_Manager/Accounts.txt";
 
 		try {
-			File accounts = new File(filePath);
-			Scanner Reader = new Scanner(accounts);
-			while (Reader.hasNextLine()) {
-				data = Reader.nextLine();
-				System.out.println(data);
+			BufferedReader reader = new BufferedReader(new FileReader(filePath));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				String[] parts = line.split("=", 2); // Split the line into two parts
+				if (parts.length >= 2) {
+					String key = parts[0];
+					String value = parts[1];
+					map.put(key, value);
+				}
 			}
-			Reader.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("An error occurred.");
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		if (map.get(accNum) != null) {
+			System.out.println("Value for key: " + map.get(accNum));
+		} else {
+			System.out.println("The account does not exist..");
+		}
+
 	}
 
 }
