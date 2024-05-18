@@ -5,11 +5,10 @@ import java.util.*;
 public class MainProgram {
 
 	public static void main(String[] args) {
+		
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Enter your account num: ");
-		String accNum = input.next();
-		SaveAccount.save(accNum);
+		SaveAccount.save(input);
 
 		System.out.println("How many words do you want for your password: ");
 		int pass_length = input.nextInt();
