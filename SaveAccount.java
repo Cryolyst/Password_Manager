@@ -20,8 +20,12 @@ public class SaveAccount {
 
 
 		try {
-			FileWriter writer = new FileWriter(filePath, true);
+//			FileWriter to write the accounts detalis in the file			
+			FileWriter writer = new FileWriter(filePath, true); //put the append mode to true
+			
+//			Iterate through the entries in the accounts HashMap			
 			for (HashMap.Entry<String, String> entry : accounts.entrySet()) {
+//				To write account number and password to the file
 				writer.write(entry.getKey() + "=" + entry.getValue() + "\n");
 			}
 			writer.close();
