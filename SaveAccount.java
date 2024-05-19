@@ -13,9 +13,10 @@ public class SaveAccount {
 		HashMap<String, String> accounts = new HashMap<>();
 
 		System.out.println("Enter account number: ");
-		String accNum = input.next();
-		System.out.println("Enter password: ");
-		String password = input.next();
+		String accNum = input.nextLine();
+		System.out.println("How many words do you want for your password: ");
+		int pass_length = input.nextInt();
+		String password = generatePassword.generate(pass_length);
 		accounts.put(accNum, password);
 
 

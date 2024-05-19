@@ -9,11 +9,6 @@ public class MainProgram {
 		Scanner input = new Scanner(System.in);
 
 		SaveAccount.save(input);
-
-		System.out.println("How many words do you want for your password: ");
-		int pass_length = input.nextInt();
-
-		System.out.println(generatePassword.generate(pass_length));
 		
 		ReadFile.check("123473");
 
