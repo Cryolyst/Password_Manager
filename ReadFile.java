@@ -6,7 +6,7 @@ import java.io.*;
 public class ReadFile {
 
 	public static void check(String accNum) {
-		
+
 //		To store account numbers and passwords
 		HashMap<String, String> map = new HashMap<>();
 
@@ -17,10 +17,10 @@ public class ReadFile {
 //			The bufferedReader reads from the file
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
 			String line;
-			
+
 //			while loop to read the file line by line
 			while ((line = reader.readLine()) != null) {
-				
+
 //				Split each line into a key and a value based on "="
 				String[] parts = line.split("=", 2);
 				if (parts.length >= 2) {

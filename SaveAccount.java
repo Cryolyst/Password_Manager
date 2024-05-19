@@ -13,17 +13,16 @@ public class SaveAccount {
 		HashMap<String, String> accounts = new HashMap<>();
 
 		System.out.println("Enter account number: ");
-		String accNum = input.nextLine();
+		String accNum = input.next();
 		System.out.println("How many words do you want for your password: ");
 		int pass_length = input.nextInt();
 		String password = generatePassword.generate(pass_length);
 		accounts.put(accNum, password);
 
-
 		try {
 //			FileWriter to write the accounts detalis in the file			
-			FileWriter writer = new FileWriter(filePath, true); //put the append mode to true
-			
+			FileWriter writer = new FileWriter(filePath, true); // put the append mode to true
+
 //			Iterate through the entries in the accounts HashMap			
 			for (HashMap.Entry<String, String> entry : accounts.entrySet()) {
 //				To write account number and password to the file

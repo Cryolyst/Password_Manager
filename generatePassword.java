@@ -13,7 +13,7 @@ public class generatePassword {
 		String lowercase = "abcdefghijklmnopqrstuvwxyz";
 		String uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		String numbers = "0123456789";
-		String specialchars = "!@#$%^&*()_-+={}[]|.,<>;:";
+		String specialchars = "!@#$%^&*()_-+{}[]|.,<>;:";
 
 		chars.append(lowercase);
 		chars.append(uppercase);
